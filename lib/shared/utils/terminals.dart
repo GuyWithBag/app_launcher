@@ -29,6 +29,14 @@ class TerminalShell {
     return 'sh';
   }
 
+  // void call() {
+  //   pty.call();
+  // }
+
+  void write(String args) {
+    terminal.write(args);
+  }
+
   void _startPty() {
     pty = Pty.start(
       shell,
